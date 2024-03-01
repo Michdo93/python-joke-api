@@ -1,13 +1,18 @@
 # python-joke-api
-A Python script accessing the JokeAPI.
+A Python script accessing the JokeAPI. It works with `Python 2.7` and `Python 3.x` as well.
 
 ## Pre-Installation
 
-You have to install following via pip:
+You have to install following via pip. If you use `Python 2.7` you have to run
 
 ```
-pip install asyncio
-pip install jokeapi
+python -m pip install requests
+```
+
+If you use `Python 3.x` you have to run
+
+```
+python3 -m pip install requests
 ```
 
 ## Usage
@@ -21,12 +26,21 @@ python joke.py
 As example you receive something like this:
 
 ```
-Es gibt 10 Arten von Menschen.
-Die einen verstehen das Binäre System, die anderen nicht.
-Mir ist heute Morgen ein Joghurtbecher aus der Hand gefallen.
-Er war nicht mehr haltbar.
-Wenn man diese CD rückwärts spielt, sind satanische Verse zu hören.
-Viel schlimmer, wenn man sie vorwärts spielt, installiert sie Windows.
-Warum hat niemand das Getränk des Soldaten gefunden?
-Es war in einer Camouflasche
+{
+    "error": false,
+    "category": "Misc",
+    "type": "single",
+    "joke": "What does the MacBook have in common with Donald Trump?\n\nI would tell you....\nBut I don't compare apples to oranges.",
+    "flags": {
+        "nsfw": false,
+        "religious": false,
+        "political": true,
+        "racist": false,
+        "sexist": false,
+        "explicit": false
+    },
+    "id": 233,
+    "safe": false,
+    "lang": "en"
+}
 ```
